@@ -5,7 +5,7 @@
 //  Created by Альбина Лега on 18/10/2022.
 //
 
-class DataStore {
+//class DataStore {
 var names = [
     "Лера",
     "Женя",
@@ -49,4 +49,4 @@ var emails = [
     "mashulya@gmail.com",
     "kozemyatko.brand@gmail.com"
 ]
-}
+//}

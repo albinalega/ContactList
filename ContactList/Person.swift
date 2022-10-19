@@ -19,26 +19,26 @@ struct Person {
     
     static func getData() -> [Person] {
         var peopleData: [Person] = []
-        for _ in DataStore().names {
-            if !DataStore().names.isEmpty {
-                let currentName = DataStore().names.randomElement() ?? ""
-                let currentSurname = DataStore().surnames.randomElement() ?? ""
-                let currentPhoneNumber = DataStore().phoneNumbers.randomElement() ?? ""
-                let currentEmail = DataStore().emails.randomElement() ?? ""
-                peopleData.append(
-                    Person(
-                        name: currentName,
-                        surname: currentSurname,
-                        phoneNumber: currentPhoneNumber,
-                        email: currentEmail
-                    )
+        for _ in names {
+        if !names.isEmpty {
+            let currentName = names.randomElement() ?? ""
+            let currentSurname = surnames.randomElement() ?? ""
+            let currentPhoneNumber = phoneNumbers.randomElement() ?? ""
+            let currentEmail = emails.randomElement() ?? ""
+            peopleData.append(
+                Person(
+                    name: currentName,
+                    surname: currentSurname,
+                    phoneNumber: currentPhoneNumber,
+                    email: currentEmail
                 )
-                DataStore().names = DataStore().names.filter({ $0 != currentName })
-                DataStore().surnames = DataStore().surnames.filter({ $0 != currentSurname })
-                DataStore().phoneNumbers = DataStore().phoneNumbers.filter({ $0 != currentPhoneNumber })
-                DataStore().emails = DataStore().emails.filter({ $0 != currentEmail })
-            }
+            )
+            names = names.filter({ $0 != currentName })
+            surnames = surnames.filter({ $0 != currentSurname })
+            phoneNumbers = phoneNumbers.filter({ $0 != currentPhoneNumber })
+            emails = emails.filter({ $0 != currentEmail })
         }
+    }
         print(peopleData)
         return peopleData
     }

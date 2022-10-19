@@ -15,6 +15,7 @@
 		5579438628FF55510052F995 /* ContactsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5579438528FF55510052F995 /* ContactsListViewController.swift */; };
 		5579438828FF55890052F995 /* PeopleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5579438728FF55890052F995 /* PeopleData.swift */; };
 		55B63752290024140022C77E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B63751290024140022C77E /* Person.swift */; };
+		55B6375429009CE70022C77E /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B6375329009CE70022C77E /* ContactDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5579438528FF55510052F995 /* ContactsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListViewController.swift; sourceTree = "<group>"; };
 		5579438728FF55890052F995 /* PeopleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleData.swift; sourceTree = "<group>"; };
 		55B63751290024140022C77E /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		55B6375329009CE70022C77E /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				5579437328FF53470052F995 /* SceneDelegate.swift */,
 				5579437728FF53470052F995 /* Main.storyboard */,
 				5579438528FF55510052F995 /* ContactsListViewController.swift */,
+				55B6375329009CE70022C77E /* ContactDetailsViewController.swift */,
 				5579438728FF55890052F995 /* PeopleData.swift */,
 				55B63751290024140022C77E /* Person.swift */,
 				5579437A28FF53490052F995 /* Assets.xcassets */,
@@ -146,6 +149,7 @@
 			files = (
 				55B63752290024140022C77E /* Person.swift in Sources */,
 				5579438628FF55510052F995 /* ContactsListViewController.swift in Sources */,
+				55B6375429009CE70022C77E /* ContactDetailsViewController.swift in Sources */,
 				5579437228FF53470052F995 /* AppDelegate.swift in Sources */,
 				5579438828FF55890052F995 /* PeopleData.swift in Sources */,
 				5579437428FF53470052F995 /* SceneDelegate.swift in Sources */,

@@ -39,7 +39,6 @@ struct Person {
             emails = emails.filter({ $0 != currentEmail })
         }
     }
-        print(peopleData)
         return peopleData
     }
 }

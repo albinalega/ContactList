@@ -15,8 +15,9 @@ class ContactDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = person.fullName
         phoneNumber.text = person.phoneNumber
         email.text = person.email
-        navigationItem.title = person.fullName
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreImage
 
 struct Person {
     let name: String
@@ -16,39 +17,43 @@ struct Person {
     var fullName: String {
         "\(name) \(surname)"
     }
-    
-    static func getData() -> [Person] {
-        var peopleData: [Person] = []
-        for _ in names {
-        if !names.isEmpty {
-            let currentName = names.randomElement() ?? ""
-            let currentSurname = surnames.randomElement() ?? ""
-            let currentPhoneNumber = phoneNumbers.randomElement() ?? ""
-            let currentEmail = emails.randomElement() ?? ""
-            peopleData.append(
-                Person(
-                    name: currentName,
-                    surname: currentSurname,
-                    phoneNumber: currentPhoneNumber,
-                    email: currentEmail
-                )
+}
+
+extension Person {
+    static func getContactList() -> [Person] {
+        
+        var people: [Person] = []
+        
+        // создаем перемешенные копии массивов:
+        let names = DataStore.shared.names.shuffled()
+        let surnames = DataStore.shared.surnames.shuffled()
+        let phoneNumbers = DataStore.shared.phoneNumbers.shuffled()
+        let emails = DataStore.shared.emails.shuffled()
+        
+        // определяем кол-во итераций, которое равно минимальному кол-ву элементов переданных массивов
+        let iterationCount = min(
+            names.count,
+            surnames.count,
+            phoneNumbers.count,
+            emails.count
+        )
+        
+        for index in 0..<iterationCount {
+            let person = Person(
+                name: names[index],
+                surname: surnames[index],
+                phoneNumber: phoneNumbers[index],
+                email: emails[index]
             )
-            names = names.filter({ $0 != currentName })
-            surnames = surnames.filter({ $0 != currentSurname })
-            phoneNumbers = phoneNumbers.filter({ $0 != currentPhoneNumber })
-            emails = emails.filter({ $0 != currentEmail })
+            
+            people.append(person)
         }
-    }
-        return peopleData
+        
+        return people
     }
 }
 
-
-
-
-//Person(
-//    name: names.randomElement() ?? "",
-//    surname: surnames.randomElement() ?? "",
-//    phoneNumber: phoneNumbers.randomElement() ?? "",
-//    email: emails.randomElement() ?? ""
-//)
+enum Contacts: String {
+    case phone = "phone"
+    case email = "tray"
+}
